@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image - bazel-linux
       uses: mattdavis0351/actions/docker-gpr@v1
       with:
-        repo-token: ${{ secrets.GITHUB_DOCKER }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         image-name: bazel-linux
         dockerfile-location: bazel-linux/
