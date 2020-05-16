@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image - bazel-linux
-      run: docker build bazel-linux/ --file Dockerfile --tag docker.pkg.github.com/michael-tu/docker-images/bazel-linux:latest
+      uses: mattdavis0351/actions/docker-gpr@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_DOCKER }}
+        image-name: bazel-linux
+        dockerfile-location: bazel-linux/
