@@ -2,7 +2,7 @@ FROM ubuntu
 WORKDIR /app
 
 # Set bazel version
-ENV BAZEL_VERSION 3.2.0
+ENV BAZEL_VERSION 5.1.0
 
 # Install common packages
 RUN apt-get update && apt install -y unzip gcc g++ curl git make
